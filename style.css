@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    font-family: 'Poppins';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #8a14ae;
+}
+
+.semana {
+    display: flex;
+    list-style: none;
+    gap: 5px;
+    height: 120px;
+    padding: 20px 40px;
+    border-radius: 10px;
+    background: #c35bff;
+}
+
+.semana li {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    font-size: 1.25rem;
+}
+
+.semana li.atual {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    font-size: 1.65rem;
+    font-weight: 500;
+    background: #da0bff;
+    color: #fff;
+    border: 5px solid #8a14ae;
+    transform: translateY(-70px);
+    cursor: pointer;
+}
+
+.semana li.atual::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 44px;
+    left: -36px;
+    border-top-right-radius: 10px;
+    box-shadow: 6px -6px #8a14ae;
+    background:#c35bff;
+}
+
+.semana li.atual::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 44px;
+    right: -36px;
+    border-top-left-radius: 10px;
+    box-shadow: -6px -6px #8a14ae;
+    background:#c35bff;
+}
+
+.semana li.atual h1{
+    position: absolute;
+    transform: translateY(76px);
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.semana li.atual h5{
+    position: absolute;
+    transform: translateY(102px);
+    font-size: .75rem;
+    font-weight: 500;
+}
+
+.semana li.atual h3{
+    position: absolute;
+    transform: translateY(-62px);
+    font-size: .85rem;
+    font-weight: 500;
+}
